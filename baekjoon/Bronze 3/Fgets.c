@@ -1,19 +1,11 @@
 #include <stdio.h>
-#include <string.h>
 
 int main(void)
 {
-    char arr[100][101];
-    int i=0;
-    while(i<100 && fgets(arr[i],sizeof(arr[i]),stdin) != EOF)
+    char str[101];
+    while (fgets(str, sizeof(str), stdin) != NULL)
     {
-        i++;
-    }
-    int k=0;
-    while(k<i)
-    {
-        printf("%s",arr[k]);
-        k++;
+        printf("%s", str);
     }
     return 0;
 }
